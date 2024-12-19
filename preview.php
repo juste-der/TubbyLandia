@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <img src="/images/Yrgopelago2.png" alt="">
+    <img src="../images/Yrgopelago2.png" alt="">
 </body>
 
 </html>
