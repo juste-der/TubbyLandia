@@ -18,26 +18,86 @@ if (isset($_ENV['API_KEY']) && !empty($_ENV['API_KEY'])) {
 
 $client = new Client(
     [
-        'url' => 'https://www.yrgopelago.se/centralbank',
+        'base_uri' => 'https://www.yrgopelago.se/centralbank/',
         'timeout' => 5.0,
     ]
 );
 
+
 function getBank(Client $client): string
 {
     $response = $client->get('/');
-    echo $response;
     return $response->getBody()->getContents();
 }
 
 function getIslands(Client $client): array
 {
-    $response = $client->get('/island');
+    $response = $client->get('islands');
     return json_decode($response->getBody()->getContents(), true);
 }
 function submitIslands(Client $client, array $data): array
 {
-    $response = $client->post('/islands', ['json' => $data]);
+    $response = $client->post('islands', [
+        'headers' => [
+            'Authorization' => 'Manager ' . $_ENV['API_KEY'],
+            'Accept' => 'application/json',
+        ],
+        'json' => [
+            'islandName' => $data['islandName'],
+            'hotelName' => $data['hotelName'],
+            'url' => $data['url'],
+            'stars' => $data['stars'],
+            'owner' => $data['owner'],
+            'api_key' => $_ENV['API_KEY'],
+        ],
+    ]);
+
+    return json_decode($response->getBody()->getContents(), true) ?? [
+        'success' => true,
+        'message' => 'Island submitted successfully, but no response was returned.',
+    ];
+}
+
+function checkTransferCode(Client $client, string $transferCode, int $totalCost): array
+{
+    $response = $client->post(
+        'transferCode',
+        [
+            'form_params' => [
+                'transferCode' => $transferCode,
+                'totalcost' => $totalCost,
+            ]
+        ]
+    );
     return json_decode($response->getBody()->getContents(), true);
 }
-// function getAPI??
+function withdraw(Client $client, string $username, string $apiKey, int $amount): array
+{
+    $response = $client->post(
+        'withdraw',
+        [
+            'form_params' => [
+                'user' => $username,
+                'api_key' => $apiKey,
+                'amount' => $amount,
+            ]
+        ]
+    );
+    return json_decode($response->getBody()->getContents(), true);
+}
+function deposit(Client $client, string $username, string $payer, string $transferCode, int $numberOfDays): array
+{
+    $response = $client->post(
+        'deposit',
+        [
+            'form_params' => [
+                'user' => $username,
+                'payer' => $payer,
+                'transferCode' => $transferCode,
+                'numberOfDays' => $numberOfDays,
+            ]
+        ]
+    );
+
+    return json_decode($response->getBody()->getContents(), true);
+}
