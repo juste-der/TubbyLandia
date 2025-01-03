@@ -1,0 +1,25 @@
+.room-img-container {
+  display: inline-block;
+  position: relative;
+  width: 18rem;
+  height: 18rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+.room-img-container img {
+  width: 100%;
+  height: 100%;
+}
+.image-button {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  border: none;
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.image-button:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
