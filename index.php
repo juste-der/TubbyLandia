@@ -35,21 +35,237 @@
             </div>
         </div>
     </section>
-    <h1>Feel the Tubby Magic – Your Perfect Escape Awaits!</h1>
-    <div class="room-1">
-        <h1>Luxury Room</h1>
-        <div class="room-img-container">
-            <img src="/images/luxury_room1.webp" alt="Luxury room image 1">
-            <button class="image-button">
-                <img src="/images/img-button.png" alt="Image container button">
-            </button>
-        </div>
-        <div id="room1-popup" class="room1-popup">
-            <span class="close">&times;</span>
-        </div>
-
+    <div class="booking-heading">
+        <h1>Feel the Tubby Magic – Your Perfect Escape Awaits!</h1>
     </div>
+    <div class="booking-page">
+        <div class="room1-container">
+            <div class="left-container">
+                <p class="room-title">Luxury Room</p>
+                <div class="gallery-container">
+                    <img src="/images/luxury_room1.webp" alt="Luxury room image 1">
+                    <button class="image-button">
+                        <img src="/images/img-button.png" alt="Image container button">
+                    </button>
+                </div>
+                <div class="gallery-popup">
 
+                    <div class="gallery-content">
+                        <span class="close">&times;</span>
+                        <div class="gallery-slider">
+                            <img id="luxury-room1" src="/images/luxury_room1.webp" alt="Luxury room image 1">
+                            <img id="luxury-room2" src="/images/luxury_room2.webp" alt="Luxury room image 2">
+                            <img id="luxury-room3" src="/images/luxury_room3.webp" alt="Luxury room image 3">
+                            <img id="luxury-room4" src="/images/luxury_room4.webp" alt="Luxury room image 4">
+                        </div>
+                        <div class="gallery-slider-nav">
+                            <a href="#luxury-room1"></a>
+                            <a href="#luxury-room2"></a>
+                            <a href="#luxury-room3"></a>
+                            <a href="#luxury-room4"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="room-details">
+                    <div class="room-detail">
+                        <img src="/images/size.svg" alt="room size icon">
+                        <p>72 m²</p>
+                    </div>
+                    <div class="room-detail">
+                        <img src="/images/person.svg" alt="room person icon">
+                        <p>4</p>
+                    </div>
+                    <div class="room-detail">
+                        <img src="/images/bed.svg" alt="room bed icon">
+                        <p>4 Twin or 2 King</p>
+                    </div>
+                </div>
+                <div class="amenities-container">
+                    <div class="amenity">
+                        <img src="/images/pool.svg" alt="pool icon">
+                        <p>Spa Area <br> with Pool</p>
+                    </div>
+                    <div class="amenity">
+                        <img src="/images/yatzy.svg" alt="yatzy icon">
+                        <p>Yatzy</p>
+                    </div>
+                    <div class="amenity">
+                        <img src="/images/minibar.svg" alt="minibar icon">
+                        <p>Minibar</p>
+                    </div>
+                </div>
+            </div>
+            <div class="right-container">
+                <div class="details-container">
+                    <div class="details-left">
+                        <p class="pay-online">Pay Online <img src="/images/card.svg" alt="card icon"></p>
+                        <p class="price-info">Price per night</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="68" height="2" viewBox="0 0 68 2" fill="none">
+                            <path d="M0 1.5L67.5 1" stroke="#53350B" stroke-opacity="0.2" />
+                        </svg>
+                        <p class="cancellation">Free cancellation policy</p>
+                    </div>
+                    <div class="details-right">
+                        <span class="price">$8</span>
+                        <button class="availability-button">CHECK AVAILABILITY</button>
+                    </div>
+                </div>
+                <p class="discount-info">Get 30% discount when booking 4 days or more</p>
+            </div>
+
+        </div>
+        <div class="room2-container">
+            <div class="left-container">
+                <p class="room-title">Standard Room</p>
+                <div class="gallery-container">
+                    <img src="/images/standard_room3.webp" alt="Standard room image">
+                    <button class="image-button">
+                        <img src="/images/img-button.png" alt="Image container button">
+                    </button>
+                </div>
+                <div class="gallery-popup">
+
+                    <div class="gallery-content">
+                        <span class="close">&times;</span>
+                        <div class="gallery-slider">
+                            <img id="standard-room1" src="/images/standard_room1.webp" alt="Standard room image 1">
+                            <img id="standard-room2" src="/images/standard_room2.avif" alt="Standard room image 2">
+                            <img id="standard-room3" src="/images/standard_room3.webp" alt="Standard room image 3">
+                            <img id="standard-room4" src="/images/standard_room4.webp" alt="Standard room image 4">
+                        </div>
+                        <div class="gallery-slider-nav">
+                            <a href="#standard-room1"></a>
+                            <a href="#standard-room2"></a>
+                            <a href="#standard-room3"></a>
+                            <a href="#standard-room4"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="room-details">
+                    <div class="room-detail">
+                        <img src="/images/size.svg" alt="room size icon">
+                        <p>52 m²</p>
+                    </div>
+                    <div class="room-detail">
+                        <img src="/images/person.svg" alt="room person icon">
+                        <p>2</p>
+                    </div>
+                    <div class="room-detail">
+                        <img src="/images/bed.svg" alt="room bed icon">
+                        <p>2 Twin or 1 King</p>
+                    </div>
+                </div>
+                <div class="amenities-container">
+                    <div class="amenity">
+                        <img src="/images/pool.svg" alt="pool icon">
+                        <p>Spa Area <br> with Pool</p>
+                    </div>
+                    <div class="amenity">
+                        <img src="/images/yatzy.svg" alt="yatzy icon">
+                        <p>Yatzy</p>
+                    </div>
+                    <div class="amenity">
+                        <img src="/images/minibar.svg" alt="minibar icon">
+                        <p>Minibar</p>
+                    </div>
+                </div>
+            </div>
+            <div class="right-container">
+                <div class="details-container">
+                    <div class="details-left">
+                        <p class="pay-online">Pay Online <img src="/images/card.svg" alt="card icon"></p>
+                        <p class="price-info">Price per night</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="68" height="2" viewBox="0 0 68 2" fill="none">
+                            <path d="M0 1.5L67.5 1" stroke="#53350B" stroke-opacity="0.2" />
+                        </svg>
+                        <p class="cancellation">Free cancellation policy</p>
+                    </div>
+                    <div class="details-right">
+                        <span class="price">$4</span>
+                        <button class="availability-button">CHECK AVAILABILITY</button>
+                    </div>
+                </div>
+                <p class="discount-info">Get 30% discount when booking 4 days or more</p>
+            </div>
+
+        </div>
+        <div class="room3-container">
+            <div class="left-container">
+                <p class="room-title">Budget Room</p>
+                <div class="gallery-container">
+                    <img src="/images/budget_room1.webp" alt="Budget room image">
+                    <button class="image-button">
+                        <img src="/images/img-button.png" alt="Image container button">
+                    </button>
+                </div>
+                <div class="gallery-popup">
+
+                    <div class="gallery-content">
+                        <span class="close">&times;</span>
+                        <div class="gallery-slider">
+                            <img id="budget-room1" src="/images/budget_room1.webp" alt="budget room image 1">
+                            <img id="budget-room2" src="/images/budget_room2.avif" alt="budget room image 2">
+                            <img id="budget-room3" src="/images/budget_room3.webp" alt="budget room image 3">
+                            <img id="budget-room4" src="/images/budget_room4.webp" alt="budget room image 4">
+                        </div>
+                        <div class="gallery-slider-nav">
+                            <a href="#budget-room1"></a>
+                            <a href="#budget-room2"></a>
+                            <a href="#budget-room3"></a>
+                            <a href="#budget-room4"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="room-details">
+                    <div class="room-detail">
+                        <img src="/images/size.svg" alt="room size icon">
+                        <p>32 m²</p>
+                    </div>
+                    <div class="room-detail">
+                        <img src="/images/person.svg" alt="room person icon">
+                        <p>1</p>
+                    </div>
+                    <div class="room-detail">
+                        <img src="/images/bed.svg" alt="room bed icon">
+                        <p> &nbsp; &nbsp; 1 Twin &nbsp;</p>
+                    </div>
+                </div>
+                <div class="amenities-container">
+                    <div class="amenity">
+                        <img src="/images/pool.svg" alt="pool icon">
+                        <p>Spa Area <br> with Pool</p>
+                    </div>
+                    <div class="amenity">
+                        <img src="/images/yatzy.svg" alt="yatzy icon">
+                        <p>Yatzy</p>
+                    </div>
+                    <div class="amenity">
+                        <img src="/images/minibar.svg" alt="minibar icon">
+                        <p>Minibar</p>
+                    </div>
+                </div>
+            </div>
+            <div class="right-container">
+                <div class="details-container">
+                    <div class="details-left">
+                        <p class="pay-online">Pay Online <img src="/images/card.svg" alt="card icon"></p>
+                        <p class="price-info">Price per night</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="68" height="2" viewBox="0 0 68 2" fill="none">
+                            <path d="M0 1.5L67.5 1" stroke="#53350B" stroke-opacity="0.2" />
+                        </svg>
+                        <p class="cancellation">Free cancellation policy</p>
+                    </div>
+                    <div class="details-right">
+                        <span class="price">$2</span>
+                        <button class="availability-button">CHECK AVAILABILITY</button>
+                    </div>
+                </div>
+                <p class="discount-info">Get 30% discount when booking 4 days or more</p>
+            </div>
+
+        </div>
+    </div>
+    <script src="/script/script.js"></script>
 </body>
 
 </html>
