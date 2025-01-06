@@ -4,5 +4,5 @@
 @import url(css/reset.css);
 @import url(css/header.css);
 @import url(css/gallery-popup.css);
-@import url(css/rooms.css);
+@import url(../css/rooms.css);
 @import url(css/booking-popup.css);
