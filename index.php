@@ -8,6 +8,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Aclonica&family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=IBM+Plex+Sans+JP&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend+Deca:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <title>Document</title>
 </head>
 
@@ -39,7 +41,7 @@
         <h1>Feel the Tubby Magic – Your Perfect Escape Awaits!</h1>
     </div>
     <div class="booking-page">
-        <div class="room1-container">
+        <div class="room-container">
             <div class="left-container">
                 <p class="room-title">Luxury Room</p>
                 <div class="gallery-container">
@@ -47,25 +49,25 @@
                     <button class="image-button">
                         <img src="images/img-button.png" alt="Image container button">
                     </button>
-                </div>
-                <div class="gallery-popup">
-
-                    <div class="gallery-content">
-                        <span class="close">&times;</span>
-                        <div class="gallery-slider">
-                            <img id="luxury-room1" src="images/luxury_room1.webp" alt="Luxury room image 1">
-                            <img id="luxury-room2" src="images/luxury_room2.webp" alt="Luxury room image 2">
-                            <img id="luxury-room3" src="images/luxury_room3.webp" alt="Luxury room image 3">
-                            <img id="luxury-room4" src="images/luxury_room4.webp" alt="Luxury room image 4">
-                        </div>
-                        <div class="gallery-slider-nav">
-                            <a href="#luxury-room1"></a>
-                            <a href="#luxury-room2"></a>
-                            <a href="#luxury-room3"></a>
-                            <a href="#luxury-room4"></a>
+                    <div class="gallery-popup">
+                        <div class="gallery-content">
+                            <span class="close">&times;</span>
+                            <div class="gallery-slider">
+                                <img id="luxury-room1" src="images/luxury_room1.webp" alt="Luxury room image 1">
+                                <img id="luxury-room2" src="images/luxury_room2.webp" alt="Luxury room image 2">
+                                <img id="luxury-room3" src="images/luxury_room3.webp" alt="Luxury room image 3">
+                                <img id="luxury-room4" src="images/luxury_room4.webp" alt="Luxury room image 4">
+                            </div>
+                            <div class="gallery-slider-nav">
+                                <a href="#luxury-room1"></a>
+                                <a href="#luxury-room2"></a>
+                                <a href="#luxury-room3"></a>
+                                <a href="#luxury-room4"></a>
+                            </div>
                         </div>
                     </div>
                 </div>
+
                 <div class="room-details">
                     <div class="room-detail">
                         <img src="images/size.svg" alt="room size icon">
@@ -108,13 +110,40 @@
                     <div class="details-right">
                         <span class="price">$8</span>
                         <button class="availability-button">CHECK AVAILABILITY</button>
+                        <div class="booking-popup">
+                            <div class="booking-content">
+                                <span class="close">&times;</span>
+                                <div class="upper-content">
+                                    <p class="date-container">Arrival Date <input type="text" id="arrival-date" /></p>
+                                    <p class="date-container">Departure Date <input type="text" id="departure-date" /></p>
+
+                                    <button class="select-button">SELECT</button>
+                                    <p id="availability-text">AVAILABLE</p>
+                                    <img id="availability-img" src="/images/correct.svg" alt="Correct icon">
+                                </div>
+                                <div class="line-1"></div>
+                                <div class="lower-content">
+                                    <p>FEATURES</p>
+                                    <div class="line-2"></div>
+                                    <p class="feature"><input type="checkbox"> YATZY &nbsp; 1$</p>
+                                    <p class="feature"><input type="checkbox"> SPA AND POOL AREA &nbsp; 2$</p>
+                                    <p class="feature"><input type="checkbox"> FILLED MINIBAR &nbsp; 1$</p>
+
+                                    <div class="transfercode">
+                                        <p>TRANSFERCODE</p>
+                                        <input type="text">
+                                        <button class="book-button">BOOK</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <p class="discount-info">Get 30% discount when booking 4 days or more</p>
             </div>
 
         </div>
-        <div class="room2-container">
+        <div class="room-container">
             <div class="left-container">
                 <p class="room-title">Standard Room</p>
                 <div class="gallery-container">
@@ -122,25 +151,25 @@
                     <button class="image-button">
                         <img src="images/img-button.png" alt="Image container button">
                     </button>
-                </div>
-                <div class="gallery-popup">
-
-                    <div class="gallery-content">
-                        <span class="close">&times;</span>
-                        <div class="gallery-slider">
-                            <img id="standard-room1" src="images/standard_room1.webp" alt="Standard room image 1">
-                            <img id="standard-room2" src="images/standard_room2.avif" alt="Standard room image 2">
-                            <img id="standard-room3" src="images/standard_room3.webp" alt="Standard room image 3">
-                            <img id="standard-room4" src="images/standard_room4.webp" alt="Standard room image 4">
-                        </div>
-                        <div class="gallery-slider-nav">
-                            <a href="#standard-room1"></a>
-                            <a href="#standard-room2"></a>
-                            <a href="#standard-room3"></a>
-                            <a href="#standard-room4"></a>
+                    <div class="gallery-popup">
+                        <div class="gallery-content">
+                            <span class="close">&times;</span>
+                            <div class="gallery-slider">
+                                <img id="standard-room1" src="images/standard_room1.webp" alt="Standard room image 1">
+                                <img id="standard-room2" src="images/standard_room2.avif" alt="Standard room image 2">
+                                <img id="standard-room3" src="images/standard_room3.webp" alt="Standard room image 3">
+                                <img id="standard-room4" src="images/standard_room4.webp" alt="Standard room image 4">
+                            </div>
+                            <div class="gallery-slider-nav">
+                                <a href="#standard-room1"></a>
+                                <a href="#standard-room2"></a>
+                                <a href="#standard-room3"></a>
+                                <a href="#standard-room4"></a>
+                            </div>
                         </div>
                     </div>
                 </div>
+
                 <div class="room-details">
                     <div class="room-detail">
                         <img src="images/size.svg" alt="room size icon">
@@ -183,13 +212,40 @@
                     <div class="details-right">
                         <span class="price">$4</span>
                         <button class="availability-button">CHECK AVAILABILITY</button>
+                        <div class="booking-popup">
+                            <div class="booking-content">
+                                <span class="close">&times;</span>
+                                <div class="upper-content">
+                                    <p class="date-container">Arrival Date <input type="text" id="arrival-date" /></p>
+                                    <p class="date-container">Departure Date <input type="text" id="departure-date" /></p>
+
+                                    <button class="select-button">SELECT</button>
+                                    <p id="availability-text">AVAILABLE</p>
+                                    <img id="availability-img" src="/images/correct.svg" alt="Correct icon">
+                                </div>
+                                <div class="line-1"></div>
+                                <div class="lower-content">
+                                    <p>FEATURES</p>
+                                    <div class="line-2"></div>
+                                    <p class="feature"><input type="checkbox"> YATZY &nbsp; 1$</p>
+                                    <p class="feature"><input type="checkbox"> SPA AND POOL AREA &nbsp; 2$</p>
+                                    <p class="feature"><input type="checkbox"> FILLED MINIBAR &nbsp; 1$</p>
+
+                                    <div class="transfercode">
+                                        <p>TRANSFERCODE</p>
+                                        <input type="text">
+                                        <button class="book-button">BOOK</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <p class="discount-info">Get 30% discount when booking 4 days or more</p>
             </div>
 
         </div>
-        <div class="room3-container">
+        <div class="room-container">
             <div class="left-container">
                 <p class="room-title">Budget Room</p>
                 <div class="gallery-container">
@@ -197,25 +253,25 @@
                     <button class="image-button">
                         <img src="images/img-button.png" alt="Image container button">
                     </button>
-                </div>
-                <div class="gallery-popup">
-
-                    <div class="gallery-content">
-                        <span class="close">&times;</span>
-                        <div class="gallery-slider">
-                            <img id="budget-room1" src="images/budget_room1.webp" alt="budget room image 1">
-                            <img id="budget-room2" src="images/budget_room2.avif" alt="budget room image 2">
-                            <img id="budget-room3" src="images/budget_room3.webp" alt="budget room image 3">
-                            <img id="budget-room4" src="images/budget_room4.webp" alt="budget room image 4">
-                        </div>
-                        <div class="gallery-slider-nav">
-                            <a href="#budget-room1"></a>
-                            <a href="#budget-room2"></a>
-                            <a href="#budget-room3"></a>
-                            <a href="#budget-room4"></a>
+                    <div class="gallery-popup">
+                        <div class="gallery-content">
+                            <span class="close">&times;</span>
+                            <div class="gallery-slider">
+                                <img id="budget-room1" src="images/budget_room1.webp" alt="budget room image 1">
+                                <img id="budget-room2" src="images/budget_room2.avif" alt="budget room image 2">
+                                <img id="budget-room3" src="images/budget_room3.webp" alt="budget room image 3">
+                                <img id="budget-room4" src="images/budget_room4.webp" alt="budget room image 4">
+                            </div>
+                            <div class="gallery-slider-nav">
+                                <a href="#budget-room1"></a>
+                                <a href="#budget-room2"></a>
+                                <a href="#budget-room3"></a>
+                                <a href="#budget-room4"></a>
+                            </div>
                         </div>
                     </div>
                 </div>
+
                 <div class="room-details">
                     <div class="room-detail">
                         <img src="images/size.svg" alt="room size icon">
@@ -258,6 +314,33 @@
                     <div class="details-right">
                         <span class="price">$2</span>
                         <button class="availability-button">CHECK AVAILABILITY</button>
+                        <div class="booking-popup">
+                            <div class="booking-content">
+                                <span class="close">&times;</span>
+                                <div class="upper-content">
+                                    <p class="date-container">Arrival Date <input type="text" id="arrival-date" /></p>
+                                    <p class="date-container">Departure Date <input type="text" id="departure-date" /></p>
+
+                                    <button class="select-button">SELECT</button>
+                                    <p id="availability-text">AVAILABLE</p>
+                                    <img id="availability-img" src="/images/correct.svg" alt="Correct icon">
+                                </div>
+                                <div class="line-1"></div>
+                                <div class="lower-content">
+                                    <p>FEATURES</p>
+                                    <div class="line-2"></div>
+                                    <p class="feature"><input type="checkbox"> YATZY &nbsp; 1$</p>
+                                    <p class="feature"><input type="checkbox"> SPA AND POOL AREA &nbsp; 2$</p>
+                                    <p class="feature"><input type="checkbox"> FILLED MINIBAR &nbsp; 1$</p>
+
+                                    <div class="transfercode">
+                                        <p>TRANSFERCODE</p>
+                                        <input type="text">
+                                        <button class="book-button">BOOK</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <p class="discount-info">Get 30% discount when booking 4 days or more</p>

@@ -27,9 +27,7 @@
   padding: 5rem 0;
   gap: 5rem;
 }
-.room1-container,
-.room2-container,
-.room3-container {
+.room-container {
   display: flex;
   width: 60rem;
   height: 38rem;
