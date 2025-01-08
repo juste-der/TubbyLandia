@@ -66,10 +66,20 @@ function checkTransferCode(Client $client, string $transferCode, int $totalCost)
             'form_params' => [
                 'transferCode' => $transferCode,
                 'totalcost' => $totalCost,
-            ]
+            ],
         ]
     );
-    return json_decode($response->getBody()->getContents(), true);
+
+    $rawResponse = $response->getBody()->getContents();
+    error_log("Central Bank Response: " . $rawResponse);
+
+    $decodedResponse = json_decode($rawResponse, true);
+
+    if (isset($decodedResponse['status'])) {
+        $decodedResponse['valid'] = $decodedResponse['status'] === 'success';
+    }
+
+    return $decodedResponse;
 }
 function withdraw(Client $client, string $username, string $apiKey, int $amount): array
 {
@@ -85,14 +95,13 @@ function withdraw(Client $client, string $username, string $apiKey, int $amount)
     );
     return json_decode($response->getBody()->getContents(), true);
 }
-function deposit(Client $client, string $username, string $payer, string $transferCode, int $numberOfDays): array
+function deposit(Client $client, string $username, string $transferCode, int $numberOfDays): array
 {
     $response = $client->post(
         'deposit',
         [
             'form_params' => [
                 'user' => $username,
-                'payer' => $payer,
                 'transferCode' => $transferCode,
                 'numberOfDays' => $numberOfDays,
             ]

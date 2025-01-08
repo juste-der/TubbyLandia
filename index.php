@@ -114,7 +114,7 @@ require __DIR__ . '/includes/db.php';
                     <div class="details-right">
                         <span class="price">$8</span>
                         <button class="availability-button">CHECK AVAILABILITY</button>
-                        <div class="booking-popup" data-room-id="3">
+                        <div class="booking-popup" data-room-id="3" data-room-price="8">
                             <div class="booking-content">
                                 <span class="close">&times;</span>
                                 <div class="upper-content">
@@ -129,13 +129,17 @@ require __DIR__ . '/includes/db.php';
                                 <div class="lower-content">
                                     <p>FEATURES</p>
                                     <div class="line-2"></div>
-                                    <p class="feature"><input type="checkbox"> YATZY &nbsp; 1$</p>
-                                    <p class="feature"><input type="checkbox"> SPA AND POOL AREA &nbsp; 2$</p>
-                                    <p class="feature"><input type="checkbox"> FILLED MINIBAR &nbsp; 1$</p>
+                                    <p class="feature"><input type="checkbox" class="feature-checkbox" data-cost="1" data-name="yatzy"> YATZY &nbsp; 1$</p>
+                                    <p class="feature"><input type="checkbox" class="feature-checkbox" data-cost="2" data-name="spa"> SPA AND POOL AREA &nbsp; 2$</p>
+                                    <p class="feature"><input type="checkbox" class="feature-checkbox" data-cost="2" data-name="minibar"> FILLED MINIBAR &nbsp; 2$</p>
+
+                                    <div class="total-cost-display">
+                                        <p>Total cost: $ <span class="cost-value">0</span></p>
+                                    </div>
 
                                     <div class="transfercode">
                                         <p>TRANSFERCODE</p>
-                                        <input type="text">
+                                        <input type="text" class="transfer-code">
                                         <button class="book-button">BOOK</button>
                                     </div>
                                 </div>
@@ -216,7 +220,7 @@ require __DIR__ . '/includes/db.php';
                     <div class="details-right">
                         <span class="price">$4</span>
                         <button class="availability-button">CHECK AVAILABILITY</button>
-                        <div class="booking-popup" data-room-id="2">
+                        <div class="booking-popup" data-room-id="2" data-room-price="4">
                             <div class="booking-content">
                                 <span class="close">&times;</span>
                                 <div class="upper-content">
@@ -231,13 +235,17 @@ require __DIR__ . '/includes/db.php';
                                 <div class="lower-content">
                                     <p>FEATURES</p>
                                     <div class="line-2"></div>
-                                    <p class="feature"><input type="checkbox"> YATZY &nbsp; 1$</p>
-                                    <p class="feature"><input type="checkbox"> SPA AND POOL AREA &nbsp; 2$</p>
-                                    <p class="feature"><input type="checkbox"> FILLED MINIBAR &nbsp; 1$</p>
+                                    <p class="feature"><input type="checkbox" class="feature-checkbox" data-cost="1" data-name="yatzy"> YATZY &nbsp; 1$</p>
+                                    <p class="feature"><input type="checkbox" class="feature-checkbox" data-cost="2" data-name="spa"> SPA AND POOL AREA &nbsp; 2$</p>
+                                    <p class="feature"><input type="checkbox" class="feature-checkbox" data-cost="2" data-name="minibar"> FILLED MINIBAR &nbsp; 2$</p>
+
+                                    <div class="total-cost-display">
+                                        <p>Total cost: $ <span class="cost-value">0</span></p>
+                                    </div>
 
                                     <div class="transfercode">
                                         <p>TRANSFERCODE</p>
-                                        <input type="text">
+                                        <input type="text" class="transfer-code">
                                         <button class="book-button">BOOK</button>
                                     </div>
                                 </div>
@@ -318,7 +326,7 @@ require __DIR__ . '/includes/db.php';
                     <div class="details-right">
                         <span class="price">$2</span>
                         <button class="availability-button">CHECK AVAILABILITY</button>
-                        <div class="booking-popup" data-room-id="1">
+                        <div class="booking-popup" data-room-id="1" data-room-price="2">
                             <div class="booking-content">
                                 <span class="close">&times;</span>
                                 <div class="upper-content">
@@ -333,13 +341,17 @@ require __DIR__ . '/includes/db.php';
                                 <div class="lower-content">
                                     <p>FEATURES</p>
                                     <div class="line-2"></div>
-                                    <p class="feature"><input type="checkbox"> YATZY &nbsp; 1$</p>
-                                    <p class="feature"><input type="checkbox"> SPA AND POOL AREA &nbsp; 2$</p>
-                                    <p class="feature"><input type="checkbox"> FILLED MINIBAR &nbsp; 1$</p>
+                                    <p class="feature"><input type="checkbox" class="feature-checkbox" data-cost="1" data-name="yatzy"> YATZY &nbsp; 1$</p>
+                                    <p class="feature"><input type="checkbox" class="feature-checkbox" data-cost="2" data-name="spa"> SPA AND POOL AREA &nbsp; 2$</p>
+                                    <p class="feature"><input type="checkbox" class="feature-checkbox" data-cost="2" data-name="minibar"> FILLED MINIBAR &nbsp; 2$</p>
+
+                                    <div class="total-cost-display">
+                                        <p>Total cost: $ <span class="cost-value">0</span></p>
+                                    </div>
 
                                     <div class="transfercode">
                                         <p>TRANSFERCODE</p>
-                                        <input type="text">
+                                        <input type="text" class="transfer-code">
                                         <button class="book-button">BOOK</button>
                                     </div>
                                 </div>
