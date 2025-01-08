@@ -41,62 +41,64 @@ document.addEventListener("DOMContentLoaded", function () {
     maxDate: "2025-01-31",
     dateFormat: "Y-m-d",
   });
+
+  document.querySelectorAll(".select-button").forEach((button) => {
+    button.addEventListener("click", function () {
+      const parent = button.closest(".booking-popup");
+      const arrivalDate = parent.querySelector("#arrival-date").value;
+      const departureDate = parent.querySelector("#departure-date").value;
+      const roomId = parent.getAttribute("data-room-id");
+
+      if (!arrivalDate || !departureDate) {
+        alert("Please select both arrival and departure dates.");
+        return;
+      }
+
+      fetch("../includes/availability.php", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          room_id: roomId,
+          arrival_date: arrivalDate,
+          departure_date: departureDate,
+        }),
+      })
+        .then((response) => response.text()) // Use .text() to capture the raw response
+        .then((data) => {
+          console.log("Raw response:", data);
+        })
+        .catch((error) => {
+          console.error("Error checking availability:", error);
+        });
+
+      //   fetch("../includes/availability.php", {
+      //     method: "POST",
+      //     headers: { "Content-Type": "application/json" },
+      //     body: JSON.stringify({
+      //       room_id: roomId,
+      //       arrival_date: arrivalDate,
+      //       departure_date: departureDate,
+      //     }),
+      //   })
+      //     .then((response) => response.json())
+      //     .then((data) => {
+      //       const availabilityText = parent.querySelector("#availability-text");
+      //       const availabilityImg = parent.querySelector("#availability-img");
+
+      //       if (data.available) {
+      //         availabilityText.textContent = "AVAILABLE";
+      //         availabilityImg.src = "/images/correct.svg";
+      //       } else {
+      //         availabilityText.textContent = "NOT AVAILABLE";
+      //         availabilityImg.src = "/images/wrong.svg";
+      //       }
+      //     })
+      //     .catch((error) => {
+      //       console.error("Error checking availability:", error);
+      //       alert(
+      //         "An error occurred while checking availability. Please try again."
+      //       );
+      //     });
+    });
+  });
 });
-
-// document.addEventListener("DOMContentLoaded", function () {
-//   const galleryButtons = document.querySelectorAll(".image-button");
-//   const galleryPopups = document.querySelectorAll(".gallery-popup");
-
-//   const bookingButtons = document.querySelectorAll(".availability-button");
-//   const bookingPopups = document.querySelectorAll(".booking-popup");
-
-//   // Function to handle popups
-//   function setupPopups(buttons, popups) {
-//     buttons.forEach((button, index) => {
-//       const popup = popups[index];
-
-//       // Ensure popup exists
-//       if (!popup) {
-//         console.error(`Popup not found for button at index ${index}`);
-//         return;
-//       }
-
-//       // Open popup on button click
-//       button.addEventListener("click", function () {
-//         popup.style.display = "block";
-//       });
-
-//       // Close popup on clicking the close button
-//       const closeBtn = popup.querySelector(".close");
-//       if (closeBtn) {
-//         closeBtn.addEventListener("click", function () {
-//           popup.style.display = "none";
-//         });
-//       }
-
-//       // Close popup when clicking outside
-//       window.addEventListener("click", function (event) {
-//         if (event.target === popup) {
-//           popup.style.display = "none";
-//         }
-//       });
-//     });
-//   }
-
-//   // Initialize popups
-//   setupPopups(galleryButtons, galleryPopups);
-//   setupPopups(bookingButtons, bookingPopups);
-
-//   // Initialize Flatpickr for booking popup date fields
-//   flatpickr("#arrival-date", {
-//     minDate: "2025-01-01", // Start of January 2025
-//     maxDate: "2025-01-31", // End of January 2025
-//     dateFormat: "Y-m-d", // Format as Year-Month-Day
-//   });
-
-//   flatpickr("#departure-date", {
-//     minDate: "2025-01-01", // Start of January 2025
-//     maxDate: "2025-01-31", // End of January 2025
-//     dateFormat: "Y-m-d", // Format as Year-Month-Day
-//   });
-// });

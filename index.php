@@ -1,3 +1,7 @@
+<?php
+require __DIR__ . '/includes/db.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -216,12 +220,12 @@
                             <div class="booking-content">
                                 <span class="close">&times;</span>
                                 <div class="upper-content">
-                                    <p class="date-container">Arrival Date <input type="text" id="arrival-date" /></p>
-                                    <p class="date-container">Departure Date <input type="text" id="departure-date" /></p>
+                                    <!-- <p class="date-container">Arrival Date <input type="text" id="arrival-date" /></p> -->
+                                    <!-- <p class="date-container">Departure Date <input type="text" id="departure-date" /></p> -->
 
                                     <button class="select-button">SELECT</button>
-                                    <p id="availability-text">AVAILABLE</p>
-                                    <img id="availability-img" src="/images/correct.svg" alt="Correct icon">
+                                    <!-- <p id="availability-text">AVAILABLE</p> -->
+                                    <!-- <img id="availability-img" src="/images/correct.svg" alt="Correct icon"> -->
                                 </div>
                                 <div class="line-1"></div>
                                 <div class="lower-content">
@@ -318,12 +322,12 @@
                             <div class="booking-content">
                                 <span class="close">&times;</span>
                                 <div class="upper-content">
-                                    <p class="date-container">Arrival Date <input type="text" id="arrival-date" /></p>
-                                    <p class="date-container">Departure Date <input type="text" id="departure-date" /></p>
+                                    <!-- <p class="date-container">Arrival Date <input type="text" id="arrival-date" /></p>
+                                    <p class="date-container">Departure Date <input type="text" id="departure-date" /></p> -->
 
                                     <button class="select-button">SELECT</button>
-                                    <p id="availability-text">AVAILABLE</p>
-                                    <img id="availability-img" src="/images/correct.svg" alt="Correct icon">
+                                    <!-- <p id="availability-text">AVAILABLE</p> -->
+                                    <!-- <img id="availability-img" src="/images/correct.svg" alt="Correct icon"> -->
                                 </div>
                                 <div class="line-1"></div>
                                 <div class="lower-content">
