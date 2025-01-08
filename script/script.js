@@ -30,23 +30,26 @@ document.addEventListener("DOMContentLoaded", function () {
   setupPopups(galleryButtons, galleryPopups);
   setupPopups(bookingButtons, bookingPopups);
 
-  flatpickr("#arrival-date", {
-    minDate: "2025-01-01",
-    maxDate: "2025-01-31",
-    dateFormat: "Y-m-d",
+  document.querySelectorAll(".arrival-date").forEach((input) => {
+    flatpickr(input, {
+      minDate: "2025-01-01",
+      maxDate: "2025-01-31",
+      dateFormat: "Y-m-d",
+    });
   });
-
-  flatpickr("#departure-date", {
-    minDate: "2025-01-01",
-    maxDate: "2025-01-31",
-    dateFormat: "Y-m-d",
+  document.querySelectorAll(".departure-date").forEach((input) => {
+    flatpickr(input, {
+      minDate: "2025-01-01",
+      maxDate: "2025-01-31",
+      dateFormat: "Y-m-d",
+    });
   });
 
   document.querySelectorAll(".select-button").forEach((button) => {
     button.addEventListener("click", function () {
       const parent = button.closest(".booking-popup");
-      const arrivalDate = parent.querySelector("#arrival-date").value;
-      const departureDate = parent.querySelector("#departure-date").value;
+      const arrivalDate = parent.querySelector(".arrival-date").value;
+      const departureDate = parent.querySelector(".departure-date").value;
       const roomId = parent.getAttribute("data-room-id");
 
       if (!arrivalDate || !departureDate) {
@@ -63,42 +66,25 @@ document.addEventListener("DOMContentLoaded", function () {
           departure_date: departureDate,
         }),
       })
-        .then((response) => response.text()) // Use .text() to capture the raw response
+        .then((response) => response.json())
         .then((data) => {
-          console.log("Raw response:", data);
+          const availabilityText = parent.querySelector(".availability-text");
+          const availabilityImg = parent.querySelector(".availability-img");
+
+          if (data.available) {
+            availabilityText.textContent = "AVAILABLE";
+            availabilityImg.src = "/images/correct.svg";
+          } else {
+            availabilityText.textContent = "NOT AVAILABLE";
+            availabilityImg.src = "/images/wrong.svg";
+          }
         })
         .catch((error) => {
           console.error("Error checking availability:", error);
+          alert(
+            "An error occurred while checking availability. Please try again."
+          );
         });
-
-      //   fetch("../includes/availability.php", {
-      //     method: "POST",
-      //     headers: { "Content-Type": "application/json" },
-      //     body: JSON.stringify({
-      //       room_id: roomId,
-      //       arrival_date: arrivalDate,
-      //       departure_date: departureDate,
-      //     }),
-      //   })
-      //     .then((response) => response.json())
-      //     .then((data) => {
-      //       const availabilityText = parent.querySelector("#availability-text");
-      //       const availabilityImg = parent.querySelector("#availability-img");
-
-      //       if (data.available) {
-      //         availabilityText.textContent = "AVAILABLE";
-      //         availabilityImg.src = "/images/correct.svg";
-      //       } else {
-      //         availabilityText.textContent = "NOT AVAILABLE";
-      //         availabilityImg.src = "/images/wrong.svg";
-      //       }
-      //     })
-      //     .catch((error) => {
-      //       console.error("Error checking availability:", error);
-      //       alert(
-      //         "An error occurred while checking availability. Please try again."
-      //       );
-      //     });
     });
   });
 });

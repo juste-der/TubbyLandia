@@ -114,16 +114,16 @@ require __DIR__ . '/includes/db.php';
                     <div class="details-right">
                         <span class="price">$8</span>
                         <button class="availability-button">CHECK AVAILABILITY</button>
-                        <div class="booking-popup">
+                        <div class="booking-popup" data-room-id="3">
                             <div class="booking-content">
                                 <span class="close">&times;</span>
                                 <div class="upper-content">
-                                    <p class="date-container">Arrival Date <input type="text" id="arrival-date" /></p>
-                                    <p class="date-container">Departure Date <input type="text" id="departure-date" /></p>
+                                    <p class="date-container">Arrival Date <input type="text" class="arrival-date" /></p>
+                                    <p class="date-container">Departure Date <input type="text" class="departure-date" /></p>
 
                                     <button class="select-button">SELECT</button>
-                                    <p id="availability-text">AVAILABLE</p>
-                                    <img id="availability-img" src="/images/correct.svg" alt="Correct icon">
+                                    <p class="availability-text">AVAILABLE</p>
+                                    <img class="availability-img" src="/images/correct.svg" alt="Correct icon">
                                 </div>
                                 <div class="line-1"></div>
                                 <div class="lower-content">
@@ -216,16 +216,16 @@ require __DIR__ . '/includes/db.php';
                     <div class="details-right">
                         <span class="price">$4</span>
                         <button class="availability-button">CHECK AVAILABILITY</button>
-                        <div class="booking-popup">
+                        <div class="booking-popup" data-room-id="2">
                             <div class="booking-content">
                                 <span class="close">&times;</span>
                                 <div class="upper-content">
-                                    <!-- <p class="date-container">Arrival Date <input type="text" id="arrival-date" /></p> -->
-                                    <!-- <p class="date-container">Departure Date <input type="text" id="departure-date" /></p> -->
+                                    <p class="date-container">Arrival Date <input type="text" class="arrival-date" /></p>
+                                    <p class="date-container">Departure Date <input type="text" class="departure-date" /></p>
 
                                     <button class="select-button">SELECT</button>
-                                    <!-- <p id="availability-text">AVAILABLE</p> -->
-                                    <!-- <img id="availability-img" src="/images/correct.svg" alt="Correct icon"> -->
+                                    <p class="availability-text">AVAILABLE</p>
+                                    <img class="availability-img" src="/images/correct.svg" alt="Correct icon">
                                 </div>
                                 <div class="line-1"></div>
                                 <div class="lower-content">
@@ -318,16 +318,16 @@ require __DIR__ . '/includes/db.php';
                     <div class="details-right">
                         <span class="price">$2</span>
                         <button class="availability-button">CHECK AVAILABILITY</button>
-                        <div class="booking-popup">
+                        <div class="booking-popup" data-room-id="1">
                             <div class="booking-content">
                                 <span class="close">&times;</span>
                                 <div class="upper-content">
-                                    <!-- <p class="date-container">Arrival Date <input type="text" id="arrival-date" /></p>
-                                    <p class="date-container">Departure Date <input type="text" id="departure-date" /></p> -->
+                                    <p class="date-container">Arrival Date <input type="text" class="arrival-date" /></p>
+                                    <p class="date-container">Departure Date <input type="text" class="departure-date" /></p>
 
                                     <button class="select-button">SELECT</button>
-                                    <!-- <p id="availability-text">AVAILABLE</p> -->
-                                    <!-- <img id="availability-img" src="/images/correct.svg" alt="Correct icon"> -->
+                                    <p class="availability-text">AVAILABLE</p>
+                                    <img class="availability-img" src="/images/correct.svg" alt="Correct icon">
                                 </div>
                                 <div class="line-1"></div>
                                 <div class="lower-content">
