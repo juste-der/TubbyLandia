@@ -229,7 +229,7 @@ require __DIR__ . '/includes/db.php';
 
                                     <button class="select-button">SELECT</button>
                                     <p class="availability-text">AVAILABLE</p>
-                                    <img class="availability-img" src="/images/correct.svg" alt="Correct icon">
+                                    <img class="availability-img" src="images/correct.svg" alt="Correct icon">
                                 </div>
                                 <div class="line-1"></div>
                                 <div class="lower-content">

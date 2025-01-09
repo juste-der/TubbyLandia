@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", function () {
         return;
       }
 
-      fetch("../includes/availability.php", {
+      fetch("includes/availability.php", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -157,7 +157,7 @@ document.addEventListener("DOMContentLoaded", function () {
         cost: parseFloat(checkbox.getAttribute("data-cost")),
       }));
 
-      fetch("../includes/book.php", {
+      fetch("includes/book.php", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
