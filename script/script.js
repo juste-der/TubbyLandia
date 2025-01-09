@@ -180,8 +180,11 @@ document.addEventListener("DOMContentLoaded", function () {
         .then((response) => response.json())
         .then((data) => {
           if (data.success) {
-            alert("Booking successful!");
-            location.reload();
+            alert(
+              "Booking successful!\n\n" +
+                "Check console for booking details. Sorry for the inconvenience."
+            );
+            console.log(JSON.stringify(data.booking_details, null, 2));
           } else {
             alert("Booking failed: " + data.message);
           }

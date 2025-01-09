@@ -1,8 +1,10 @@
 <?php
 
-
+session_start();
 require __DIR__ . '/db.php';
 require __DIR__ . '/api.php';
+
+
 
 header('Content-Type: application/json');
 
@@ -49,11 +51,23 @@ try {
         echo json_encode(['success' => false, 'message' => 'Deposit failed: ' . ($depositResponse['message'] ?? 'Unknown error')]);
         exit;
     }
-
-
+    $bookingDetails = [
+        "island" => "TubbyLandia",
+        "hotel" => "Sunshine Dome Hotel",
+        "arrival_date" => $arrivalDate,
+        "departure_date" => $departureDate,
+        "total_cost" => $totalCost,
+        "stars" => 4,
+        "features" => $features,
+        "additional_info" => [
+            "greeting" => "Thank you for choosing Sunshine Dome Hotel!",
+            "imageUrl" => "https://giphy.com/gifs/teletubbiesofficial-hug-teletubbies-teletubby-Qur3qH5qrLpGJauEcj"
+        ]
+    ];
     echo json_encode([
         'success' => true,
-        'message' => 'Booking successful and payment received.'
+        'message' => 'Booking successful and payment received.',
+        'booking_details' => $bookingDetails,
     ]);
 } catch (Exception $e) {
     echo json_encode(['success' => false, 'message' => $e->getMessage()]);
