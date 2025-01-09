@@ -61,7 +61,11 @@ document.addEventListener("DOMContentLoaded", function () {
       return 0;
     }
 
-    const roomCost = numberOfDays * roomPrice;
+    let roomCost = numberOfDays * roomPrice;
+
+    if (numberOfDays >= 4) {
+      roomCost *= 0.7; // Apply 30% discount
+    }
 
     let featureCost = 0;
     parent.querySelectorAll(".feature-checkbox:checked").forEach((checkbox) => {

@@ -49,3 +49,33 @@
 .slider::-webkit-scrollbar {
   display: none;
 }
+
+.booking-heading,
+.welcome-heading {
+  background: linear-gradient(90deg, #ff7a00, #ffc700, #ff7a00);
+}
+.booking-heading h1 {
+  padding: 2rem 0;
+  font-size: 2.5rem;
+  text-align: center;
+  font-family: "Bebas Neue", cursive;
+  color: #53350b;
+  animation: bounce 2s infinite;
+}
+.welcome-heading p {
+  padding: 1rem 0;
+  font-size: 1.5rem;
+  text-align: center;
+  font-family: "Bebas Neue", cursive;
+  color: #53350b;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}

@@ -20,7 +20,7 @@ require __DIR__ . '/includes/db.php';
 <body>
     <header class="header">
         <img src="images/logo.svg" alt="">
-        <h1>SUNSHINE DOME HOTEL</h1>
+        <h1>SUNSHINE DOME HOTEL &#11088;&#11088;&#11088;&#11088;</h1>
         <h3>TubbyLandia</h3>
     </header>
     <section class="hero-container">
@@ -43,6 +43,10 @@ require __DIR__ . '/includes/db.php';
     </section>
     <div class="booking-heading">
         <h1>Feel the Tubby Magic – Your Perfect Escape Awaits!</h1>
+    </div>
+    <div class="welcome-heading">
+        <p>Nestled in the heart of TubbyLandia, the magical island rumored to be the land of the Teletubbies, the Sunshine Dome Hotel is the premier destination for comfort and nostalgia-filled luxury.</p>
+        <p>4-Star Experience: Indulge in a stay so delightful, you’ll think you’re in Teletubbyland itself! Enjoy world-class amenities, cheerful vibes, and service that’ll make you feel like royalty.</p>
     </div>
     <div class="booking-page">
         <div class="room-container">
@@ -118,12 +122,12 @@ require __DIR__ . '/includes/db.php';
                             <div class="booking-content">
                                 <span class="close">&times;</span>
                                 <div class="upper-content">
-                                    <p class="date-container">Arrival Date <input type="text" class="arrival-date" /></p>
-                                    <p class="date-container">Departure Date <input type="text" class="departure-date" /></p>
+                                    <p class="date-container">Arrival Date <input type="text" class="arrival-date" placeholder="Select Arrival Date" /></p>
+                                    <p class="date-container">Departure Date <input type="text" class="departure-date" placeholder="Select Departure Date" /></p>
 
                                     <button class="select-button">SELECT</button>
                                     <p class="availability-text">AVAILABLE</p>
-                                    <img class="availability-img" src="/images/correct.svg" alt="Correct icon">
+                                    <img class="availability-img" src="images/correct.svg" alt="Correct icon">
                                 </div>
                                 <div class="line-1"></div>
                                 <div class="lower-content">
@@ -224,8 +228,8 @@ require __DIR__ . '/includes/db.php';
                             <div class="booking-content">
                                 <span class="close">&times;</span>
                                 <div class="upper-content">
-                                    <p class="date-container">Arrival Date <input type="text" class="arrival-date" /></p>
-                                    <p class="date-container">Departure Date <input type="text" class="departure-date" /></p>
+                                    <p class="date-container">Arrival Date <input type="text" class="arrival-date" placeholder="Select Arrival Date" /></p>
+                                    <p class="date-container">Departure Date <input type="text" class="departure-date" placeholder="Select Departure Date" /></p>
 
                                     <button class="select-button">SELECT</button>
                                     <p class="availability-text">AVAILABLE</p>
@@ -330,12 +334,12 @@ require __DIR__ . '/includes/db.php';
                             <div class="booking-content">
                                 <span class="close">&times;</span>
                                 <div class="upper-content">
-                                    <p class="date-container">Arrival Date <input type="text" class="arrival-date" /></p>
-                                    <p class="date-container">Departure Date <input type="text" class="departure-date" /></p>
+                                    <p class="date-container">Arrival Date <input type="text" class="arrival-date" placeholder="Select Arrival Date" /></p>
+                                    <p class="date-container">Departure Date <input type="text" class="departure-date" placeholder="Select Departure Date" /></p>
 
                                     <button class="select-button">SELECT</button>
                                     <p class="availability-text">AVAILABLE</p>
-                                    <img class="availability-img" src="/images/correct.svg" alt="Correct icon">
+                                    <img class="availability-img" src="images/correct.svg" alt="Correct icon">
                                 </div>
                                 <div class="line-1"></div>
                                 <div class="lower-content">
