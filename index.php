@@ -79,11 +79,11 @@ require __DIR__ . '/includes/db.php';
                     </div>
                     <div class="room-detail">
                         <img src="images/person.svg" alt="room person icon">
-                        <p>4</p>
+                        <p>1</p>
                     </div>
                     <div class="room-detail">
                         <img src="images/bed.svg" alt="room bed icon">
-                        <p>4 Twin or 2 King</p>
+                        <p>King Size</p>
                     </div>
                 </div>
                 <div class="amenities-container">
@@ -185,11 +185,11 @@ require __DIR__ . '/includes/db.php';
                     </div>
                     <div class="room-detail">
                         <img src="images/person.svg" alt="room person icon">
-                        <p>2</p>
+                        <p>1</p>
                     </div>
                     <div class="room-detail">
                         <img src="images/bed.svg" alt="room bed icon">
-                        <p>2 Twin or 1 King</p>
+                        <p>King Size</p>
                     </div>
                 </div>
                 <div class="amenities-container">

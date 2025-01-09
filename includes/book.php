@@ -1,6 +1,5 @@
 <?php
 
-
 require __DIR__ . '/db.php';
 require __DIR__ . '/api.php';
 
@@ -49,6 +48,7 @@ try {
         echo json_encode(['success' => false, 'message' => 'Deposit failed: ' . ($depositResponse['message'] ?? 'Unknown error')]);
         exit;
     }
+
 
     echo json_encode([
         'success' => true,

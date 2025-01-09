@@ -106,12 +106,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
           if (data.available) {
             availabilityText.textContent = "AVAILABLE";
-            availabilityImg.src = "/images/correct.svg";
+            availabilityImg.src = "images/correct.svg";
 
             calculateTotalCost(parent);
           } else {
             availabilityText.textContent = "NOT AVAILABLE";
-            availabilityImg.src = "/images/wrong.svg";
+            availabilityImg.src = "images/wrong.svg";
 
             const costValueElement = parent.querySelector(".cost-value");
             if (costValueElement) {
