@@ -56,12 +56,12 @@
   background-color: #755c3b;
 }
 .line-1 {
-  width: 790.001px;
+  width: 50rem;
   height: 1px;
   background: rgba(83, 53, 11, 0.2);
 }
 .line-2 {
-  width: 242.002px;
+  width: 15rem;
   height: 1px;
   background: rgba(83, 53, 11, 0.2);
   margin-top: 0.5rem;
@@ -81,5 +81,5 @@
   display: flex;
   flex-direction: column;
   margin-top: 3rem;
-  gap: 0.8rem;
+  gap: rem;
 }

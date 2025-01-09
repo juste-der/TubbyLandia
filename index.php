@@ -14,7 +14,7 @@ require __DIR__ . '/includes/db.php';
     <link rel="stylesheet" href="css/main.css">
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-    <title>Document</title>
+    <title>Sunshine Dome Hotel - TubbyLandia</title>
 </head>
 
 <body>
