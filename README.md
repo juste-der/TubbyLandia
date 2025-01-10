@@ -45,3 +45,39 @@ Technology Stack 1. Frontend: HTML, CSS, JavaScript.Flatpickr for date selection
 # License
 
 This project is licensed under the MIT License. See the LICENSE file for details.
+
+# Code Review
+
+## ## Feedback by [maxjvjohansson]
+
+1. **Root Directory**  
+   The `.DS_Store` file is not ignored by `.gitignore`, which could potentially expose sensitive directory information and be exploited in attacks. Make sure to add it to `.gitignore`.
+
+2. **Includes Directory/Config Directory**  
+   Consider storing sensitive data, such as database credentials, in a `.env` file. Additionally, ensure `.env` is listed in your `.gitignore` to prevent it from being committed to version control.
+
+3. **index.html**  
+   The file has good readability and structure. However, for better accessibility, you should replace some `<div>` elements with semantic HTML elements like `<section>` or `<article>` where appropriate.
+
+4. **Includes Directory**  
+   The `test_api.php` file appears to be a test file that doesn’t serve any purpose in the live environment. It can likely be removed to avoid unnecessary clutter.
+
+5. **api.php**  
+   The use of `'base_uri' => 'https://www.yrgopelago.se/centralbank/'` is clean and organized. However, some endpoints, such as `islands` and `withdraw`, are unused throughout the codebase, (the only used endpoints are transferCode and deposit). These could probably be removed without causing issues. On a positive note, organizing these endpoints in functions is a good practice.
+
+6. **CSS**  
+   The structure of the stylesheets is commendable, as they are divided into multiple files. However, consider being more consistent by using only one unit type (e.g., `rem` or `px`) for font sizes to maintain a DRY (Don’t Repeat Yourself) approach.
+
+7. **script.js:180-194**  
+   While displaying an alert for the receipt is a good start, it would be better UX to print the JSON in a new window instead of using `console.log` on the live server.
+
+8. **book.php**  
+   The user input you are receiving should be sanitized before further processing to prevent potential exploits. On the positive side, using placeholders in your queries is a good practice.
+
+9. **Side note**  
+   Adding more comments to your code could improve its readability and maintainability.
+
+## Conclusion  
+Overall, the project has a good and clean structure. With these suggested improvements, it could be even better.
+
+
